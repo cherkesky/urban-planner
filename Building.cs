@@ -51,6 +51,7 @@ namespace Planner
                 Own by {_owner}
                 {Volume} cubic meters of space";
       }
+           
     }
   }
 }
