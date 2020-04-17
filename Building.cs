@@ -14,7 +14,7 @@ namespace Planner
     /*
     fields
     */
-    private string _designer;
+    private string _designer = "Guy Cherkesky";
     private DateTime _dateConstructed;
     private string _address;
     private string _owner;
@@ -28,7 +28,7 @@ namespace Planner
     {
       get
       {
-        return Width * Depth;
+        return Width * Depth * (3 * Stories);
       }
     }
     /*
@@ -41,6 +41,16 @@ namespace Planner
       _owner = owner;
     }
 
-
+    public string Description{
+      get{
+        return $@"
+                {_address}
+                --------------
+                Designed by {_designer}
+                Constructed on {_dateConstructed}
+                Own by {_owner}
+                {Volume} cubic meters of space";
+      }
+    }
   }
 }
