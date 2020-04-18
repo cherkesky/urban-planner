@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace Planner
 {
   class Program
@@ -31,16 +30,20 @@ namespace Planner
         ThreeTwenty.Purchase("Guy Cherkesky");
         Laskov.Purchase("Guy Cherkesky");
 
-        Console.WriteLine(FiveOneTwo.Description);
-        Console.WriteLine(ThreeTwenty.Description);
-        Console.WriteLine(Laskov.Description);
+        // Console.WriteLine(FiveOneTwo.Description);
+        // Console.WriteLine(ThreeTwenty.Description);
+        // Console.WriteLine(Laskov.Description);
 
         City nashville = new City("Nashville", "Guy Cherkesky", 1980);
+
         nashville.addBuilding(FiveOneTwo);
         nashville.addBuilding(ThreeTwenty);
         nashville.addBuilding(Laskov);
+        
 
-
+        foreach (Building building in nashville.allBuildings) {
+          Console.WriteLine(building.Description);
+}
     }
   }
 }

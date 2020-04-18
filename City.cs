@@ -11,18 +11,21 @@ namespace Planner
       _city=cityname;
       _mayor=mayor;
       _year=year;
+      allBuildings = new List<Building>();
 
     }
     // fields
     private string _city;
     private string _mayor;
     private double _year;
-    private List<Building> _allBuildings;
+
+    // properties
+    public List<Building> allBuildings;
 
     // methods
     public void addBuilding(Building buildingToAdd)
     {
-      _allBuildings.Add(buildingToAdd);
+      allBuildings.Add(buildingToAdd);
     }
 
   }
