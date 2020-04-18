@@ -35,6 +35,12 @@ namespace Planner
         Console.WriteLine(ThreeTwenty.Description);
         Console.WriteLine(Laskov.Description);
 
+        City nashville = new City("Nashville", "Guy Cherkesky", 1980);
+        nashville.addBuilding(FiveOneTwo);
+        nashville.addBuilding(ThreeTwenty);
+        nashville.addBuilding(Laskov);
+
+
     }
   }
 }
