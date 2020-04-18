@@ -6,8 +6,11 @@ namespace Planner
   public class City
   {
     // constructor
-    public City()
+    public City(string cityname, string mayor, double year)
     {
+      _city=cityname;
+      _mayor=mayor;
+      _year=year;
 
     }
     // fields
@@ -16,7 +19,7 @@ namespace Planner
     private double _year;
     private List<Building> _allBuildings;
 
-
+    // methods
     public void addBuilding(Building buildingToAdd)
     {
       _allBuildings.Add(buildingToAdd);
